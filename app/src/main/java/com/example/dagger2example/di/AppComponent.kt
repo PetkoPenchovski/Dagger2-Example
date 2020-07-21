@@ -4,7 +4,9 @@ import android.app.Application
 import com.example.dagger2example.DaggerApp
 import com.example.dagger2example.di.modules.ActivitiesModule
 import com.example.dagger2example.di.modules.FragmentsModule
+import com.example.dagger2example.di.modules.ViewModelFactoryModule
 import com.example.dagger2example.di.modules.ViewModelsModule
+import com.example.dagger2example.viewmodels.ViewModelProviderFactory
 import dagger.BindsInstance
 import dagger.Component
 import dagger.android.AndroidInjectionModule
@@ -18,7 +20,8 @@ import javax.inject.Singleton
         AndroidInjectionModule::class,
         ActivitiesModule::class,
         FragmentsModule::class,
-        ViewModelsModule::class]
+        ViewModelsModule::class,
+        ViewModelFactoryModule::class]
 )
 interface AppComponent {
 
